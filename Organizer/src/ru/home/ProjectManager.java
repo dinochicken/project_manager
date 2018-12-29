@@ -32,7 +32,7 @@ public class ProjectManager extends JPanel implements Scrollable{
 
     }
 
-    private void buldFromList() throws Exception{
+    private void buldFromList() {
         for (Object c:
              list) {
             Line l;
@@ -42,7 +42,7 @@ public class ProjectManager extends JPanel implements Scrollable{
                 }catch (ClassCastException e){
                     l = (ToDoFile) c;
                 }
-            } else throw new Exception("piss off");
+            } else return;
             l.setMaximumSize(size);
             l.setLocation(0,23*list.indexOf(c));
             l.setBackground(Color.WHITE);
